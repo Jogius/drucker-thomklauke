@@ -11,8 +11,10 @@ function App() {
     e.preventDefault();
     const formData = new FormData();
     formData.append("text", text);
-    for (let i = 0; i < files.length; i++) {
+    if (files) {
+      for (let i = 0; i < files.length; i++) {
         formData.append("files[]", files[i]);
+      }
     }
     Axios.post(
       "http://thomklauke.ddns.net:3000/print",
