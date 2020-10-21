@@ -26,7 +26,7 @@ function App() {
           }
         }
     ).then((res) => {
-      alert(res);
+      alert(res.message);
     }).catch((err) => {
       alert(err.message);
     });
